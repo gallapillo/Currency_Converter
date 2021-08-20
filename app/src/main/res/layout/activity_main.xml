@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/background"
+    >
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/currency_converter_title"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="64sp"
+        android:textSize="22sp"
+        />
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="172dp"
+        android:background="@drawable/textinput"
+        app:layout_constraintBottom_toTopOf="@id/button"
+        app:layout_constraintHorizontal_bias="0.363"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label"
+        app:layout_constraintVertical_bias="0.209"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        >
+
+        <TextView
+            android:id="@+id/TvFrom"
+            android:layout_width="128dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="150dp"
+            android:text="From"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:layout_width="282dp"
+                android:layout_height="95dp"
+                android:layout_marginTop="36dp"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/TvFrom"
+                app:layout_constraintVertical_bias="0.058"
+                android:textSize="48sp"
+                android:id="@+id/edFrom"
+                android:textColorHint="@color/white"
+                android:hint="100,00"
+                android:inputType="numberDecimal"
+                />
+
+        <TextView
+            android:id="@+id/tv_from_change_currency"
+            android:layout_width="64dp"
+            android:layout_height="24dp"
+            android:hint="@string/hint_text_currency_usd"
+            android:textColorHint="@color/white"
+
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/edFrom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.803"
+            app:layout_constraintStart_toEndOf="@+id/TvFrom"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.648"
+            app:drawableEndCompat="@drawable/ic_drop_down" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_height="172dp"
+        android:background="@drawable/textinput"
+        app:layout_constraintBottom_toTopOf="@id/button"
+        app:layout_constraintHorizontal_bias="0.363"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label"
+        app:layout_constraintVertical_bias="0.721" >
+
+        <TextView
+            android:id="@+id/tvTo"
+            android:layout_width="128dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="12dp"
+            android:text="To"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginRight="150dp"
+            />
+
+        <TextView
+            android:layout_width="282dp"
+            android:layout_height="95dp"
+            android:layout_marginTop="36dp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvTo"
+            app:layout_constraintVertical_bias="0.058"
+            android:id="@+id/edTo"
+            android:text="100,00"
+            android:textSize="48sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_to_change_currency"
+            android:layout_width="64dp"
+            android:layout_height="24dp"
+            android:hint="@string/hint_text_currency_eur"
+            android:textColorHint="@color/white"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/edTo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.803"
+            app:layout_constraintStart_toEndOf="@+id/tvTo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.648"
+            app:drawableEndCompat="@drawable/ic_drop_down" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:width="40sp"
+        android:layout_marginBottom="24sp"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="@string/convert_button"
+        android:textColor="@color/black"
+        android:background="@drawable/button"
+        android:textSize="16sp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
